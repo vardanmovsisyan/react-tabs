@@ -1,5 +1,4 @@
 import React, { CSSProperties } from "react";
-import PropTypes from 'prop-types';
 import { TabProvider, TabConsumer } from "./TabsContext";
 import TabItem, {TabInputs} from "./Tab";
 
@@ -90,17 +89,6 @@ const ReactTabs = ({ children, ...restProps }) => (
 class Tabs extends React.Component {
   static Tab = TabItem;
 
-  static propTypes: {
-    activeTab: {
-      id: React.Validator<string>;
-    };
-    children: React.Validator<React.ReactNode[]>;
-    tabsProps: {
-      style?: React.Validator<Object>;
-      className?: React.Validator<string>;
-    }
-  };
-
   props: {
     activeTab: TabInputs;
     children: React.ReactDOM;
@@ -186,16 +174,5 @@ class Tabs extends React.Component {
     );
   }
 }
-
-Tabs.propTypes = {
-  activeTab: {
-    id: PropTypes.string.isRequired,
-  },
-  children: PropTypes.arrayOf(PropTypes.node).isRequired,
-  tabsProps: {
-    style: PropTypes.object,
-    className: PropTypes.string
-  }
-};
 
 export default Tabs;

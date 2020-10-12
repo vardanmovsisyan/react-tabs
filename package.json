@@ -7,7 +7,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "typescript": "~3.8.3"
+    "typescript": "~3.8.3",
+    "yarn": "^1.22.10"
   },
   "scripts": {
     "build": "yarn clean:all && yarn build:esm2015 && yarn build:esm5 && yarn build:fesm2015 && yarn build:fesm5 && yarn build:umd && yarn build:umd:min && yarn move:assets",
